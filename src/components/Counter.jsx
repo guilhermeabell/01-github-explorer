@@ -7,7 +7,6 @@ export function Counter() {
   function increment() {
    setCounter(counter + 1);
   }
-
   return (
     <div>
       <h2>{counter}</h2>
@@ -16,5 +15,5 @@ export function Counter() {
       </button>
     </div>
   );
-  
+
 }
