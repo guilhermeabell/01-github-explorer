@@ -15,7 +15,9 @@ export function RepositoryList() {
   const [repositories, setRepositories] = useState([]);
 
   useEffect(() => {
-
+      fetch('https://api.github.com/users/vulgoguix')
+      .then( response => response.json())
+      .then( data => console.log(data))
   }, [repositories])
   
   return ( 
