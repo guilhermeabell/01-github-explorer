@@ -1,5 +1,9 @@
+import { useState, useEffect } from "react";
 import { RepositoryItem } from "./RepositoryItem";
 
+import '../styles/repositories.scss'
+
+// api.github/users/vulgoguix
 
 const repository = {
   name: 'unform',
@@ -8,7 +12,13 @@ const repository = {
 }
 
 export function RepositoryList() {
-  return (
+  const [repositories, setRepositories] = useState([]);
+
+  useEffect(() => {
+
+  }, [repositories])
+  
+  return ( 
     <section className="repository-list">
       <h1>Lista de repositórios</h1>
 
@@ -21,3 +31,7 @@ export function RepositoryList() {
     </section>
   )
 }
+
+
+
+
